@@ -31,7 +31,7 @@ type StandardAPIResponse struct {
 
 func main() {
 	//config load
-	configuration := config.New("./server/.env")
+	configuration := config.New(".env")
 
 	//database connect
 	dbConStr := configuration.Get("POSTGRES_CONNECT")
