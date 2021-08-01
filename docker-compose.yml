@@ -12,16 +12,16 @@ services:
     ports:
       - "5432:5432"
 
-  go-account:
+  account:
     build: 
       context: .
-      dockerfile: ./go-account/Dockerfile
+      dockerfile: ./account/Dockerfile
       target: Dev
     depends_on: 
       - gcref-pgdb
-    container_name: go-account
+    container_name: account
     volumes: 
-      - ./go-account/server:/go/src/gf-ref/go-account/server
+      - ./account/server:/go/src/gf-ref/account/server
     ports: 
       - "7070:7070"
 
